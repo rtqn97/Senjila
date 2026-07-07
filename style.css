@@ -1,0 +1,533 @@
+/* ======================================
+GOOGLE FONT
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ======================================
+RESET
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ======================================
+BODY
+====================================== */
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    background:#000;
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ======================================
+SCREENS
+====================================== */
+
+.screen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+    opacity 1s ease,
+    visibility 1s ease;
+
+}
+
+.screen.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ======================================
+CENTER BOX
+====================================== */
+
+.centerBox{
+
+    width:90%;
+
+    max-width:700px;
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+/* ======================================
+HEADINGS
+====================================== */
+
+h1{
+
+    font-size:3rem;
+
+    color:#FFD76A;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 20px rgba(255,215,106,.3);
+
+}
+
+h2{
+
+    font-size:2rem;
+
+    line-height:1.6;
+
+    font-weight:600;
+
+}
+
+/* ======================================
+PARAGRAPH
+====================================== */
+
+p{
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:#ECECEC;
+
+}
+
+/* ======================================
+HIGHLIGHT
+====================================== */
+
+.gold{
+
+    color:#FFD76A;
+
+}
+
+/* ======================================
+BUTTONS
+====================================== */
+
+button{
+
+    margin-top:45px;
+
+    padding:
+
+    16px
+    42px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    background:#FFD76A;
+
+    color:#111;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ======================================
+INTRO
+====================================== */
+
+#introScreen{
+
+    background:#000;
+
+}
+
+/* ======================================
+OPENING
+====================================== */
+
+#openingScreen{
+
+    background:#000;
+
+}
+
+#openingScreen h2{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+#openingScreen p{
+
+    margin-top:20px;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+/* ======================================
+PHOTO
+====================================== */
+
+#photoScreen{
+
+    background:#000;
+
+}
+
+#photoContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+#mainPhoto{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1);
+
+}
+
+#photoOverlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.20),
+
+    rgba(0,0,0,.55)
+
+    );
+
+  }
+/* ======================================
+MESSAGE SCREEN
+====================================== */
+
+#messageScreen{
+
+    background:#000;
+
+}
+
+.messageBox{
+
+    width:90%;
+
+    max-width:800px;
+
+    text-align:center;
+
+}
+
+.messageLine{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    margin-bottom:20px;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+}
+
+.wish{
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+    margin-top:10px;
+
+}
+
+.signature{
+
+    margin-top:35px;
+
+    opacity:0;
+
+    color:#FFD76A;
+
+    font-size:1.05rem;
+
+    letter-spacing:2px;
+
+}
+
+/* ======================================
+GOODBYE SCREEN
+====================================== */
+
+#goodbyeScreen{
+
+    background:#000;
+
+}
+
+#goodbyeScreen h2{
+
+    color:#FFD76A;
+
+}
+
+/* ======================================
+PARTICLES
+====================================== */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    color:#FFD76A;
+
+    opacity:.6;
+
+    animation:
+    floatUp linear forwards;
+
+}
+
+/* ======================================
+FLOAT ANIMATION
+====================================== */
+
+@keyframes floatUp{
+
+    from{
+
+        transform:
+        translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ======================================
+PHOTO ZOOM
+====================================== */
+
+@keyframes slowZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.10);
+
+    }
+
+}
+
+/* ======================================
+FADE IN
+====================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ======================================
+FADE UP
+====================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* ======================================
+FADE OUT
+====================================== */
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+/* ======================================
+MOBILE
+====================================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    h2{
+
+        font-size:1.5rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
+
+    .messageLine{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+    .wish{
+
+        font-size:1.3rem;
+
+    }
+
+    button{
+
+        padding:
+        14px
+        30px;
+
+        font-size:.95rem;
+
+    }
+
+      }
