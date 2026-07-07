@@ -104,7 +104,7 @@ function showPhoto(){
     photoScreen.classList.add("active");
 
     birthdayPhoto.style.animation =
-    "slowZoom 20s linear forwards";
+    "slowZoom 9s linear forwards";
 
     startParticles();
 
@@ -112,7 +112,7 @@ function showPhoto(){
 
         showMessage();
 
-    },20000);
+    },9000);
 
 }
 
